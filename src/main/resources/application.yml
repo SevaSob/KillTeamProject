@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/killteam
+    username: postgres
+    password: 12345
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+# true — при каждом запуске чистить и заливать заново.
+# false — заливать только если база пустая. Кнопка "Заполнить тестовыми данными" работает в любом случае.
+app:
+  data:
+    reset: false
